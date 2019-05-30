@@ -15,7 +15,7 @@
 
 - Cost: 가설과 실제 데이터간의 차이(loss, error)
 
-- ![cost function](C:\Users\student\Desktop\Cobbee\cost function.PNG)
+![Cost Function](https://user-images.githubusercontent.com/23356503/58540467-64a5ab80-8234-11e9-8ec3-dee58530cc23.png)
 
   m: 전체 데이터 수
 
