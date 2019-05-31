@@ -282,9 +282,48 @@ Iter: 100, Loss: 0.0054, Learning Rate: 0.09216000
 
 ---
 
+### Lab 07-3 linear regression - Eager (normalization, decay, l2_loss)
 
+- Data sets
 
+  - 모델 설계
 
+    ![img](../resources/img/0531/img13.png)
+
+  - 검증
+
+    ![img](../resources/img/0531/img14.png)
+
+  - 이상 감지
+
+    ![img](../resources/img/0531/img15.png)
+
+- Learning
+
+  - Online과 Batch의 차이
+
+    ![img](../resources/img/0531/img16.png)
+
+  - Fine Tuning / Feature Extraction
+
+    ![img](../resources/img/0531/img18.png)
+
+    - Find-tuning : 새로운 데이터가 왔을때, 기존 모델을 학습시키는 방식
+    - Feature Extraction : 새로운 데이터가 왔을때, 기존 모델에 말고 새롭게 학습시키는 방식
+
+- Sample Data
+
+  - 의류 구분
+
+    ![img](../resources/img/0531/img19.png)
+
+  - 리뷰 분석
+
+    ![img](../resources/img/0531/img20.png)
+
+---
+
+​	
 
 
 
