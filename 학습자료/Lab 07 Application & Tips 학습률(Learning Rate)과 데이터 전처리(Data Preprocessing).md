@@ -2,7 +2,12 @@
 
 ---
 
-- 
+-  Learning rate
+   -  
+-  Data preprocessiong
+   -  
+-  Overfitting
+   -  
 
 
 
