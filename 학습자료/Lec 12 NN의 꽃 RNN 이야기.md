@@ -103,13 +103,21 @@
 
 ### Lab 12-2 many to one stacking
 
-- 
+- Multi-layed RNN, Stacked RNN
 
+  ![img](../resources/img/0603/img16.png)
 
+---
 
+### Lab 12-3 many to many
 
+- 형태소 분석에 쓰임
 
+  ![img](../resources/img/0603/img17.png)
 
+  - 
+
+  
 
 
 
