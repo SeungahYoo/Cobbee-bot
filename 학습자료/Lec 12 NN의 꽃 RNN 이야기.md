@@ -115,9 +115,127 @@
 
   ![img](../resources/img/0603/img17.png)
 
-  - 
+  - Sequence loss를 백프로포게이션(?)으로 학습할 수 있다.
 
-  
+---
+
+### Lab 12-4 many to many bidirectional
+
+- bidirectional : 양방향으로 활용
+
+  ![img](../resources/img/0604/img1.png)
+  - forward RNN : hidden state가 가지고 있는 정보가 순차적
+  - backward RNN :  forward RNN과 역순
+
+- 활용 과정
+
+  ![img](../resources/img/0604/img2.png)
+
+  - forward와 backward hidden state의 정보를 컨키네이트(?)하는 방식으로 합치고 weight와 bias를 이용하여 값을 추출해낸다.
+  - weight와 bias는 모든 데이터에서 동일하게 사용한다.
+  - 구현은 12-3과 동일하지만, 함수 호출 중 bidirectional만 추가하면 됨
+
+---
+
+### Seq2Seq (Chat bot에서 활용)
+
+- Seq2Seq : Sequence의 데이터를 받고 Sequence의 데이터를 반환하는 것
+
+  ![img](../resources/img/0604/img3.png)
+
+- Example : Chatbot
+
+  ![img](../resources/img/0604/img4.png)
+
+- 대표적인 활용 사례
+
+  ![img](../resources/img/0604/img5.png)
+
+  - input : 하나의 단어
+  - c : RNN의 마지막 Hidden state 데이터 값 (Encoder 요약 값)
+  - decoder : 각 스텝의 출력값이 다음 스텝의 입력값에 사용된다.
+
+![img](../resources/img/0604/img6.png)
+
+- 파란색 : Encoder / 초록색 : Decoder
+
+### Chatbot 구현
+
+1. sources를 targets으로 번역하는 dataset
+
+![img](../resources/img/0604/img7.png)
+
+2. Vocab Dict : 각각의 데이터를 integer로 맵핑
+
+   ![img](../resources/img/0604/img8.png)
+
+   - bos : 시작 토큰 / eos : 종료 토큰
+
+3. 전처리 함수
+
+   ![img](../resources/img/0604/img9.png)
+
+   ![img](../resources/img/0604/img10.png)
+
+4. suffle과 batch를 통해서 각 데이터를 설정해준다. 각 데이터는 시퀀스에 맞게 준비가 된다.
+
+   ![img](../resources/img/0604/img11.png)
+
+5. 인코더와 디코더의 기반이 되는 GRU 알고리즘 활용하는 알고리즘
+
+   ![img](../resources/img/0604/img12.png)
+
+   - CuDNNGRU : 랜덤값이 너무 작거나 크게 초기화되는 것을 방지해줌
+
+6. 인코더 구현
+
+   ![img](../resources/img/0604/img13.png)
+
+7. 디코더 구현
+
+   ![img](../resources/img/0604/img14.png)
+
+8. Loss & Optimizer
+
+   ![img](../resources/img/0604/img15.png)
+
+9. Training
+
+   ![img](../resources/img/0604/img16.png)
+
+   - 티처 포싱은 다음장에
+
+   - Training (Teacher Forcing)
+
+     ![img](../resources/img/0604/img18.png)
+
+     - 어렵다... 근데 중요한 듯!!
+
+   ![img](../resources/img/0604/img19.png)
+
+   - 예측
+
+     ![img](../resources/img/0604/img21.png)
+
+     
+
+     
+
+     
+
+     
+
+     
+
+ 
+
+
+
+
+
+
+
+
 
 
 
