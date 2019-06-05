@@ -217,15 +217,35 @@
 
      ![img](../resources/img/0604/img21.png)
 
-     
+---
 
-     
+### Lab12-6: Seq2Seq Attention
 
-     
+- 기존 Seq2Seq의 문제점
 
-     
+  ![img](../resources/img/0605/img1.png)
 
-     
+  - 한개의 벡터값을 활용하는 것은 성능이 떨어진다.
+
+- 모든 정보를 기억하지않고, 핵심 메세지와 문장만으로 이해한다.
+
+  ![img](../resources/img/0605/img2.png)
+
+![img](../resources/img/0605/img3.png)
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
 
  
 
